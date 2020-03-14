@@ -32,7 +32,5 @@ class Author
 
   def self.post_count
     @@post_count += 1
-    # binding.pry
-
   end
 end
