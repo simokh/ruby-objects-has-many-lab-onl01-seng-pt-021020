@@ -10,7 +10,7 @@ class Author
   end
 
   def posts
-    Post.all.select do 
+    Post.all.select do
       post.artist == self
     end 
   end
