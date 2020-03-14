@@ -1,7 +1,7 @@
 require 'pry'
 class Artist
 
-  attr_accessor :name, :songs
+  attr_accessor :name, :artist
     @@post_count = 0
 
   def initialize(name)
@@ -15,6 +15,11 @@ class Artist
     end
   end
 
+  def posts
+    Post.all.select do |post|
+      post.author == self
+    end
+  end
 
   def add_song(song)
   @songs << song
