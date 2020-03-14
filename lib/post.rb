@@ -3,7 +3,7 @@ class Post
   attr_accessor :title, :author
 
   @@all = []
-  
+
   def initialize(title)
     @title = title
     @@all << self
@@ -11,6 +11,7 @@ class Post
 
   def self.all
     @@all
+    binding.'pry'
   end
 
   def author_name
