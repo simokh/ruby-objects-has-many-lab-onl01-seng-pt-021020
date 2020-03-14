@@ -9,7 +9,7 @@ class Artist
     @songs = []
   end
 
-  def song
+  def songs
     Song.all.select do |song|
       song.artist == self
     end
